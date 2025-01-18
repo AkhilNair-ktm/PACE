@@ -8,9 +8,26 @@
 body{
     @apply bg-black text-white font-Jost tracking-wider;
 }
+section{
+    @apply py-20 md:py-28;
+}
+h1{
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold;
+}
 .nav-link{
     @apply text-lg font-bold duration-300;
 }
 .nav-link:hover{
     @apply text-blue-600;
+}
+
+.btn{
+    @apply bg-blue-600 rounded-md border border-blue-600 px-5 py-2 duration-300;
+}
+
+.btn span{
+    @apply text-white font-bold;
+}
+.btn:hover{
+    @apply opacity-80;
 }
