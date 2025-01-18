@@ -23,7 +23,7 @@
     <title>PACE</title>
   </head>
 
-  <body class="overflow-hidden">
+  <body>
     <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
     <header id="navbar" class="bg-black fixed w-full top-0 left-0 z-50">
       <nav class="container flex items-center justify-between h-16 sm:h-20">
@@ -37,9 +37,9 @@
         >
           <ul class="flex flex-col items-center gap-8 lg:flex-row">
             <li><a href="#" class="nav-link">Home</a></li>
-            <li><a href="#" class="nav-link">Test</a></li>
-            <li><a href="#" class="nav-link">Test</a></li>
-            <li><a href="#" class="nav-link">Test</a></li>
+            <li><a href="#" class="nav-link">About</a></li>
+            <li><a href="#" class="nav-link">Contact Us</a></li>
+            <li><a href="#" class="nav-link">Login</a></li>
           </ul>
         </div>
         <div class="text-xl sm:text-3xl cursor-pointer z-50 lg:hidden">
@@ -52,6 +52,14 @@
       <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
       <section id="home">
         <div class="container mt-4 lg:mt-0">
+          <!-- blob1 -->
+          <div
+            class="w-64 h-64 bg-blue-700 rounded-full blur-3xl -z-10 opacity-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+          ></div>
+          <!-- blob2 -->
+          <div
+            class="hidden lg:block w-64 h-64 bg-blue-700 rounded-full blur-3xl -z-10 opacity-40 absolute right-0 bottom-0"
+          ></div>
           <div class="flex flex-col items-center gap-5 lg:flex-row">
             <!-- content -->
             <div class="w-full space-y-5 lg:w-1/2">
@@ -67,12 +75,13 @@
               </p>
 
               <div class="flex md:pt-5 lg:pt-10">
-                <button class="btn">
-                  <span>Learn More</span>
-                  <i class="ri-arrow-right-line"></i>
-                </button>
+                <a href="https://shaun099.github.io/Space_Apps/second.html"
+                  ><button class="btn">
+                    <span>Learn More</span>
+                    <i class="ri-arrow-right-line"></i></button
+                ></a>
               </div>
-              <div class="flex items-center gap-5 text-lg">
+              <div class="flex items-center gap-6 text-lg">
                 <i
                   class="ri-instagram-line text-slate-300 hover:text-blue-500 duration-300 cursor-pointer"
                 ></i>
@@ -115,13 +124,110 @@
       <div></div>
 
       <!--~~~~~~~~~~~~~~~ About us ~~~~~~~~~~~~~~~-->
-      <section id="about"></section>
+      <section id="about" class="relative overflow-hidden">
+        <div
+          class="flex flex-col items-center gap-3 text-center mb-10 md:mb-20"
+        >
+          <h2 class="title">About Us</h2>
+          <p class="max-w-2xl">
+            Bringing Ocean Science and Space Exploration into the Classroom
+          </p>
+        </div>
 
-      <!--~~~~~~~~~~~~~~~ Popular ~~~~~~~~~~~~~~~-->
-      <section id="popular"></section>
+        <div class="container space-y-10 xl:space-y-0">
+          <!-- item1 -->
+          <div class="flex flex-col items-center lg:flex-row gap-5">
+            <!-- image -->
+            <div class="w-full lg:w-1/2">
+              <img
+                src="assets/images/satelite2.jpg"
+                alt="about_image"
+                class="w-full lg:w-full xl:w-2/3 mx-auto"
+              />
+            </div>
 
-      <!--~~~~~~~~~~~~~~~ Review ~~~~~~~~~~~~~~~-->
-      <section id="review"></section>
+            <!-- content -->
+            <div class="w-full lg:w-1/2">
+              <div class="space-y-5">
+                <h3>
+                  Our Mission: Bridging
+                  <span class="text-blue-600">Science</span> and
+                  <span class="text-blue-600">Education</span>
+                </h3>
+                <p class="text-slate-300 font-Jost">
+                  PACE in Classroom is an innovative project aimed at bridging
+                  the gap between complex scientific data and students
+                  worldwide. Our mission is to enhance ocean literacy by
+                  presenting the data collected by NASA’s PACE (Plankton,
+                  Aerosol, Cloud, ocean Ecosystem) satellite in a way that is
+                  engaging, digestible, and easy to understand. We believe that
+                  by making this crucial information accessible, we can inspire
+                  the next generation to care about and actively contribute to
+                  preserving our planet's oceans.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- item2 -->
+          <div class="flex flex-col items-center lg:flex-row-reverse gap-5">
+            <!-- image -->
+            <div class="w-full lg:w-1/2">
+              <img
+                src="assets/images/satellite-removebg-preview.png"
+                alt="about_image"
+                class="w-full lg:w-full xl:w-2/3 mx-auto"
+              />
+            </div>
+
+            <!-- content -->
+            <div class="w-full lg:w-1/2">
+              <div class="space-y-5">
+                <h3>
+                  Meet the
+                  <span class="text-blue-600"> Team</span> Driving
+                  <span class="text-blue-600">Ocean Literacy</span>
+                </h3>
+                <p class="text-slate-300 font-Jost">
+                  Our team consists of passionate individuals committed to
+                  fostering a deeper understanding of the Earth’s oceans and the
+                  role they play in global climate systems. Through our
+                  interactive platform, students can explore real-time data,
+                  gain insights into ocean ecosystems, and develop an
+                  appreciation for the environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~contach us ~~~~~~~~~~~~~~~-->
+      <section id="Contact Us" class="overflow-hidden">
+        <div class=" py-20">
+          <div class="container w-full">
+            <!-- card 1 -->
+            <div class="border border-blue-700 p-5 cursor-pointer rounded-md">
+              <div>
+                <h2 class="text-center text-blue-700">
+                  <i class="ri-contacts-book-3-fill"></i>Contact Us
+                </h2>
+              </div>
+              <p class="text-center py-4">
+                We’d love to hear from you! Whether you have questions,
+                feedback, or ideas to share, our team is here to help.<br />
+                <i class="ri-mail-line"></i>Email: [pace@example.com]<br />
+                <i class="ri-phone-line"></i>Ph.No: [000-000-0000]<br />
+                <i class="ri-map-pin-user-fill"></i>Location: [City, Country]<br />
+                Connect with us on social media to stay updated on our latest
+                initiatives and resources!<br />
+                Together, let’s make ocean science education accessible to
+                classrooms worldwide.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
