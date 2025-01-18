@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Jost:ital,wght@0,100..900;1,100..900&family=Mogra&family=Monoton&family=Permanent+Marker&family=Rubik+80s+Fade&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Cookie&family=Jost:ital,wght@0,100..900;1,100..900&family=Mogra&family=Monoton&family=Permanent+Marker&family=Rubik+80s+Fade&display=swap');
 
 *, ::before, ::after{
   --tw-border-spacing-x: 0;
@@ -634,6 +634,10 @@ video {
   z-index: 50;
 }
 
+.mt-4{
+  margin-top: 1rem;
+}
+
 .flex{
   display: flex;
 }
@@ -729,12 +733,16 @@ video {
   background-color: rgb(0 0 0 / 0.8);
 }
 
-.font-Mogra{
-  font-family: Mogra, sans-serif;
-}
-
 .font-Monoton{
   font-family: Monoton, sans-serif;
+}
+
+.font-Cookie{
+  font-family: Cookie, serif;
+}
+
+.font-Jost{
+  font-family: Jost, serif;
 }
 
 .text-6xl{
@@ -750,6 +758,20 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-4xl{
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-light{
+  font-weight: 300;
 }
 
 .text-blue-600{
@@ -897,6 +919,10 @@ h1{
 @media (min-width: 768px){
   .lg\:static{
     position: static;
+  }
+
+  .lg\:mt-0{
+    margin-top: 0px;
   }
 
   .lg\:hidden{

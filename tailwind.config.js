@@ -30,6 +30,7 @@ module.exports = {
       Mogra: ["Mogra", "sans-serif"], // Correct fallback
       Rubik80: ["Rubik 80s Fade", "sans-serif"],
       Jost: ["Jost", "serif"],
+      Cookie: ["Cookie", "serif"],
     },
     container: {
       center: true,
