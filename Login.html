@@ -25,6 +25,7 @@
   <body>
     <div class="flex items-center justify-center min-h-screen bg-black px-4">
       <div
+        id="loginDiv"
         class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:space-x-6 max-w-4xl w-full"
       >
         <!-- Left Content -->
@@ -85,7 +86,7 @@
           </button>
           <div class="text-center text-gray-600">
             Don't have an account?
-            <a href="#" class="font-bold text-black">Sign up for free</a>
+            <a href="#" id="signUpLink" class="font-bold text-black">Sign up for free</a>
           </div>
         </div>
         <!-- Right Image -->
@@ -97,7 +98,95 @@
           />
         </div>
       </div>
+      <div
+      id="signUpDiv"
+      class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:space-x-6 max-w-4xl w-full hidden"
+    >
+      <!-- Left Content -->
+      <div class="flex flex-col justify-center p-5 md:p-14 w-full md:w-1/2">
+        <span class="mb-3 text-4xl text-black font-bold">Sign Up for free</span>
+        <span class="font-light text-gray-400 mb-8">
+          Please enter your details for sign up
+        </span>
+        <div class="pt-6">
+          <label
+            for="username"
+            class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 text-black block"
+            >Username</label
+          >
+          <input
+            type="text"
+            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
+            name="username"
+            id="username"
+          />
+        </div>
+        <div class="py-4">
+          <label
+            for="email"
+            class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 text-black block"
+            >Email</label
+          >
+          <input
+            type="text"
+            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
+            name="email"
+            id="email"
+          />
+        </div>
+        <div class="py-4">
+          <label
+            for="pass"
+            class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 text-black block"
+            >Password</label
+          >
+          <input
+            type="password"
+            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
+            name="pass"
+            id="pass"
+          />
+        </div>
+        <div class="py-4">
+          <label
+            for="pass-confim"
+            class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 text-black block"
+            >Confirm Password</label
+          >
+          <input
+            type="password"
+            class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
+            name="pass-confim"
+            id="pass-confim"
+          />
+        </div>
+        <button
+          class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
+        >
+          Sign In
+        </button>
+        <button
+          class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 flex items-center justify-center gap-2 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
+        >
+          <img
+            src="assets/images/icons8-google-48.png"
+            alt="Google Icon"
+            class="w-6 h-6"
+          />
+          Sign in with Google
+        </button>
+      </div>
+      <!-- Right Image -->
+      <div class="relative w-full md:w-1/2 bg-black hidden lg:block">
+        <img
+          src="assets/images/pexels-spacex2.jpg"
+          alt="img"
+          class="w-[400px] h-full rounded-r-2xl md:block"
+        />
+      </div>
+    </div>
     </div>
     <script src="main.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
