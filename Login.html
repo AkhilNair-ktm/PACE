@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.png"
+      type="image/png"
+    />
+
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./output.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="flex items-center justify-center min-h-screen bg-gray-100 px-4">
+      <div
+        class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:space-x-6 max-w-4xl w-full"
+      >
+        <!-- Left Content -->
+        <div class="flex flex-col justify-center p-8 md:p-14 w-full md:w-1/2">
+          <span class="mb-3 text-4xl text-black font-bold">Welcome back</span>
+          <span class="font-light text-gray-400 mb-8">
+            Welcome back! Please enter your details
+          </span>
+          <div class="py-4">
+            <label
+              for="email"
+              class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 text-black block"
+              >Email</label
+            >
+            <input
+              type="text"
+              class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div class="py-4">
+            <label
+              for="pass"
+              class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 text-black block"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
+              name="pass"
+              id="pass"
+            />
+          </div>
+          <div class="flex justify-between w-full py-4">
+            <div>
+              <input
+                type="checkbox"
+                name="ch"
+                id="ch"
+                class="mr-2"
+              />
+              <span class="text-md text-gray-700">Remember for 30 days</span>
+            </div>
+            <a
+              href="#"
+              class="font-bold text-md text-gray-700 hover:text-black"
+              >Forgot Password?</a
+            >
+          </div>
+          <button
+            class="w-full bg-black text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
+          >
+            Sign In
+          </button>
+          <button
+            class="w-full bg-black text-white p-2 rounded-lg mb-6 flex items-center justify-center gap-2 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
+          >
+            <img
+              src="assets/images/icons8-google-48.png"
+              alt="Google Icon"
+              class="w-6 h-6"
+            />
+            Sign in with Google
+          </button>
+          <div class="text-center text-gray-600">
+            Don't have an account?
+            <span class="font-bold text-black">Sign up for free</span>
+          </div>
+        </div>
+        <!-- Right Image -->
+        <div class="relative w-full md:w-1/2">
+          <img
+            src="assets/images/LoginPagejpeg.jpeg"
+            alt="Login Image"
+            class="rounded-r-2xl object-fit w-full h-full"
+          />
+          <div
+            class="absolute bottom-10 left-4 right-4 p-4 bg-white bg-opacity-10 backdrop-blur-md rounded drop-shadow-lg"
+          >
+            <span class="text-white text-xs">
+              Explore the incredible mission to understand our planet's changing
+              climate. Dive into data, discover innovations, and join the
+              journey to safeguard Earth's future with NASA's PACE mission.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
