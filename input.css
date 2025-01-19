@@ -30,6 +30,9 @@ h3{
 .title{
     @apply font-bold text-blue-600;
 }
+.active{
+    @apply text-blue-600;
+}
 
 .btn{
     @apply bg-blue-600 rounded-md border border-blue-600 px-5 py-2 duration-300;
