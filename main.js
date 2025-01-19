@@ -46,5 +46,13 @@ const sr = ScrollReveal({
   delay: 300,
   reset: true,
 });
-sr.reveal(".home_data");
+sr.reveal(".home_data,.about_top,.contact_card");
 sr.reveal(".home_image", { delay: 700, scale: 0.8 });
+
+sr.reveal(".about_item1_content,.about_item2_img", {
+  origin: "right",
+});
+
+sr.reveal(".about_item2_content,.about_item1_img", {
+  origin: "left",
+});
