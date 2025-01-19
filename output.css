@@ -659,32 +659,24 @@ video {
   margin-top: 1rem;
 }
 
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-60{
+  margin-top: 15rem;
+}
+
+.mt-80{
+  margin-top: 20rem;
+}
+
 .flex{
   display: flex;
 }
 
 .hidden{
   display: none;
-}
-
-.size-10{
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.size-96{
-  width: 24rem;
-  height: 24rem;
-}
-
-.size-8{
-  width: 2rem;
-  height: 2rem;
-}
-
-.size-80{
-  width: 20rem;
-  height: 20rem;
 }
 
 .h-16{
@@ -789,16 +781,16 @@ video {
   gap: 2rem;
 }
 
-.space-y-5 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
-}
-
 .space-y-10 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+.space-y-5 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
 .overflow-hidden{
@@ -817,14 +809,9 @@ video {
   border-width: 1px;
 }
 
-.border-white{
+.border-blue-600{
   --tw-border-opacity: 1;
-  border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
-}
-
-.border-blue-700{
-  --tw-border-opacity: 1;
-  border-color: rgb(29 78 216 / var(--tw-border-opacity, 1));
+  border-color: rgb(37 99 235 / var(--tw-border-opacity, 1));
 }
 
 .bg-black{
@@ -841,16 +828,6 @@ video {
   background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
 }
 
-.bg-white{
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
-}
-
-.bg-blue-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity, 1));
-}
-
 .p-5{
   padding: 1.25rem;
 }
@@ -863,6 +840,25 @@ video {
 .py-4{
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.py-44{
+  padding-top: 11rem;
+  padding-bottom: 11rem;
+}
+
+.py-16{
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-14{
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.pt-28{
+  padding-top: 7rem;
 }
 
 .text-center{
@@ -910,11 +906,6 @@ video {
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.text-blue-700{
-  --tw-text-opacity: 1;
-  color: rgb(29 78 216 / var(--tw-text-opacity, 1));
 }
 
 .opacity-30{
@@ -1140,6 +1131,11 @@ h3{
 
   .lg\:bg-transparent{
     background-color: transparent;
+  }
+
+  .lg\:py-20{
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
   .lg\:pt-10{
