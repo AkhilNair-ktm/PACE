@@ -60,20 +60,20 @@
               id="pass"
             />
           </div>
-          <div class="flex justify-between w-full py-4">
+          <div class="flex flex-col md:flex-row justify-between w-full py-4">
             <div>
               <input type="checkbox" name="ch" id="ch" class="mr-2" />
-              <span class="text-md text-gray-700">Remember for 30 days</span>
+              <span class="text-md text-gray-700">Remember me</span>
             </div>
             <a href="#" class="font-bold text-md text-gray-700 hover:text-black"
               >Forgot Password?</a
             >
           </div>
           <button
-            class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
-          >
-            Sign In
+            class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300" id="signIn"
+          > Sign In
           </button>
+          <p id="loginMessage" class="py-2"></p>
           <button
             class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 flex items-center justify-center gap-2 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
           >
@@ -131,7 +131,7 @@
             type="text"
             class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
             name="email"
-            id="email"
+            id="email2"
           />
         </div>
         <div class="py-4">
@@ -144,7 +144,7 @@
             type="password"
             class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
             name="pass"
-            id="pass"
+            id="pass2"
           />
         </div>
         <div class="py-4">
@@ -160,11 +160,14 @@
             id="pass-confim"
           />
         </div>
+
+        <a href="https://shaun099.github.io/Space_Apps/second.html">
         <button
           class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
         >
           Sign In
         </button>
+      </a>
         <button
           class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 flex items-center justify-center gap-2 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
         >
