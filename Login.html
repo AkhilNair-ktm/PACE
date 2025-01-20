@@ -60,15 +60,16 @@
               id="pass"
             />
           </div>
-          <div class="flex justify-between w-full py-4">
-            <div>
+          <div class="flex flex-col sm:flex-row justify-between items-center w-full py-4">
+            <div class="flex items-center">
               <input type="checkbox" name="ch" id="ch" class="mr-2" />
               <span class="text-md text-gray-700">Remember me</span>
             </div>
-            <a href="#" class="font-bold text-md text-gray-700 hover:text-black"
-              >Forgot Password?</a
-            >
+            <a href="#" class="font-bold text-md text-gray-700 hover:text-black mt-2 sm:mt-0">
+              Forgot Password?
+            </a>
           </div>
+          
           <button
             class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300" id="signIn"
           > Sign In
@@ -131,7 +132,7 @@
             type="text"
             class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
             name="email"
-            id="email"
+            id="email2"
           />
         </div>
         <div class="py-4">
@@ -144,7 +145,7 @@
             type="password"
             class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
             name="pass"
-            id="pass"
+            id="pass2"
           />
         </div>
         <div class="py-4">
