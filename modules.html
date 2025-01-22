@@ -15,7 +15,7 @@
       }
     </style>
   </head>
-  <body class="min-h-screen bg-[#0f1025] font-mono">
+  <body class="min-h-screen bg-black font-mono">
     <!-- Sidebar -->
     <div class="flex justify-end">
       <div
@@ -29,9 +29,13 @@
       class="sidebar fixed top-0 left-0 h-full hidden lg:block w-20 lg:hover:w-64 bg-[#161a2d] transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
     >
       <div class="flex items-center space-x-4">
-        <img src="assets/images/favicon.png" alt="logo" class="w-10 h-10 rounded-full" />
+        <img
+          src="assets/images/favicon.png"
+          alt="logo"
+          class="w-10 h-10 rounded-full"
+        />
         <h2
-          class="text-xl font-semibold text-white transition-opacity duration-300"
+          class="lg:sidebarTitle text-xl font-semibold text-white transition-opacity duration-300"
         >
           PACE
         </h2>
@@ -40,110 +44,87 @@
       <ul class="mt-8 flex-1 space-y-6 overflow-auto scrollbar-hidden">
         <!-- Main Menu -->
         <h4 class="text-white font-medium flex items-center space-x-1">
-          <span
-            class= transition-opacity duration-300"
+          <span class="lg:sidebarTitle transition-opacity duration-300"
             >Modules</span
           >
           <div class="flex-grow h-px bg-[#333578]"></div>
         </h4>
         <li>
           <a
+            id="mod1-link"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4 transition-opacity duration-300 space-x-3
-              "
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300 space-x-3"
               >Module 1</span
             >
           </a>
         </li>
         <li>
           <a
+            id="mod2-link"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4 transition-opacity duration-300"
-              >Module 2</span
-            >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Module 2</span>
           </a>
         </li>
         <li>
           <a
+            id="mod3-link"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4 transition-opacity duration-300"
-              >Module 3</span
-            >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Module 3</span>
           </a>
         </li>
 
-        <!-- General -->
-        <!-- <h4 class="text-white font-medium flex items-center space-x-2 mt-8">
-          <span
-            class= transition-opacity duration-300"
-            >Module 4</span
-          >
-          <div class="flex-grow h-px bg-[#333578]"></div>
-        </h4> -->
         <li>
           <a
+            id="mod4-link"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4 transition-opacity duration-300"
-              >Module 4</span
-            >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Module 4</span>
           </a>
         </li>
         <li>
           <a
+            id="mod5-link"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4 transition-opacity duration-300"
-              >Module 5</span
-            >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Module 5</span>
           </a>
         </li>
         <li>
           <a
+            id="mod6-link"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4 transition-opacity duration-300"
-              >module 6</span
-            >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">module 6</span>
           </a>
         </li>
         <li>
           <a
+            id="mod7-link"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4 transition-opacity duration-300"
-              >module 7</span
-            >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">module 7</span>
           </a>
         </li>
         <!-- Quiz -->
         <h4 class="text-white font-medium flex items-center space-x-2 mt-8">
-          <span
-            class=" transition-opacity duration-300"
+          <span class="lg:sidebarTitle transition-opacity duration-300"
             >Assesment</span
           >
           <div class="flex-grow h-px bg-[#333578]"></div>
@@ -153,18 +134,14 @@
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-flashlight-fill text-2xl"></i>
-            <span
-              class="ml-4  transition-opacity duration-300"
-              >Quiz</span
-            >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Quiz</span>
           </a>
         </li>
 
         <!-- Account -->
         <h4 class="text-white font-medium flex items-center space-x-2 mt-8">
-          <span
-            class=" transition-opacity duration-300"
+          <span class="lg:sidebarTitle transition-opacity duration-300"
             >Account</span
           >
           <div class="flex-grow h-px bg-[#333578]"></div>
@@ -174,11 +151,8 @@
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-user-fill text-2xl"></i>
-            <span
-              class="ml-4  transition-opacity duration-300"
-              >Profile</span
-            >
+            <i class="ri-user-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Profile</span>
           </a>
         </li>
         <li>
@@ -186,11 +160,8 @@
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-user-settings-fill text-2xl"></i>
-            <span
-              class="ml-4  transition-opacity duration-300"
-              >Settings</span
-            >
+            <i class="ri-user-settings-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Settings</span>
           </a>
         </li>
         <li>
@@ -198,11 +169,8 @@
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
-          <i class="ri-logout-box-line text-2xl"></i>
-            <span
-              class="ml-4  transition-opacity duration-300"
-              >Logout</span
-            >
+            <i class="ri-logout-box-line text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300">Logout</span>
           </a>
         </li>
       </ul>
@@ -224,13 +192,16 @@
     </aside>
 
     <!-- Main Content -->
-    <section class="ml-20 p-10 text-white">
+    <section class="ml-0 p-5 lg:ml-20 text-white h-screen">
       <div class="text-center">
-        <img src="assets/images/user.png" alt="Logo" class="w-36 mx-auto mb-6" />
-        <h1 class="text-4xl font-bold mb-6">PACE</h1>
-        <h2 class="text-2xl font-semibold">Why Pace?</h2>
-        
-        
+        <div class="opening-pg bg-red-50 h-screen p-0 hidden"></div>
+        <div id="mod1" class="bg-blue-700 h-screen hidden"></div>
+        <div id="mod2" class="bg-yellow-500 h-screen hidden"></div>
+        <div id="mod3" class="bg-green-600 h-screen hidden"></div>
+        <div id="mod4" class="bg-pink-500 h-screen hidden"></div>
+        <div id="mod5" class="bg-violet-600 h-screen hidden"></div>
+        <div id="mod6" class="bg-orange-600 h-screen hidden"></div>
+        <div id="mod7" class="bg-lime-600 h-screen hidden"></div>
       </div>
     </section>
     <script src="module.js"></script>
