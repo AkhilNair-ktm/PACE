@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SideBar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      ::-webkit-scrollbar {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[#0f1025] font-mono">
+    <!-- Sidebar -->
+    <div class="flex justify-end">
+      <div
+        class="absolute text-2xl text-white my-7 mx-7 lg:hidden border border-white rounded-md bg-white/20"
+      >
+        <i class="ri-menu-2-line" id="sidebarToggler"></i>
+      </div>
+    </div>
+
+    <aside
+      class="sidebar fixed top-0 left-0 h-full hidden lg:block w-20 lg:hover:w-64 bg-[#161a2d] transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
+    >
+      <div class="flex items-center space-x-4">
+        <img src="assets/images/favicon.png" alt="logo" class="w-10 h-10 rounded-full" />
+        <h2
+          class="text-xl font-semibold text-white transition-opacity duration-300"
+        >
+          PACE
+        </h2>
+      </div>
+
+      <ul class="mt-8 flex-1 space-y-6 overflow-auto scrollbar-hidden">
+        <!-- Main Menu -->
+        <h4 class="text-white font-medium flex items-center space-x-1">
+          <span
+            class= transition-opacity duration-300"
+            >Modules</span
+          >
+          <div class="flex-grow h-px bg-[#333578]"></div>
+        </h4>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+          <i class="ri-flashlight-fill text-2xl"></i>
+            <span
+              class="ml-4 transition-opacity duration-300 space-x-3
+              "
+              >Module 1</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+          <i class="ri-flashlight-fill text-2xl"></i>
+            <span
+              class="ml-4 transition-opacity duration-300"
+              >Module 2</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+          <i class="ri-flashlight-fill text-2xl"></i>
+            <span
+              class="ml-4 transition-opacity duration-300"
+              >Module 3</span
+            >
+          </a>
+        </li>
+
+        <!-- General -->
+        <!-- <h4 class="text-white font-medium flex items-center space-x-2 mt-8">
+          <span
+            class= transition-opacity duration-300"
+            >Module 4</span
+          >
+          <div class="flex-grow h-px bg-[#333578]"></div>
+        </h4> -->
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+          <i class="ri-flashlight-fill text-2xl"></i>
+            <span
+              class="ml-4 transition-opacity duration-300"
+              >Module 4</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+          <i class="ri-flashlight-fill text-2xl"></i>
+            <span
+              class="ml-4 transition-opacity duration-300"
+              >Module 5</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+          <i class="ri-flashlight-fill text-2xl"></i>
+            <span
+              class="ml-4 transition-opacity duration-300"
+              >module 6</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+          <i class="ri-flashlight-fill text-2xl"></i>
+            <span
+              class="ml-4 transition-opacity duration-300"
+              >module 7</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+            <span class="material-symbols-outlined">notifications_active</span>
+            <span
+              class="ml-4  transition-opacity duration-300"
+              >Notifications</span
+            >
+          </a>
+        </li>
+
+        <!-- Account -->
+        <h4 class="text-white font-medium flex items-center space-x-2 mt-8">
+          <span
+            class=" transition-opacity duration-300"
+            >Account</span
+          >
+          <div class="flex-grow h-px bg-[#333578]"></div>
+        </h4>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+            <span class="material-symbols-outlined">account_circle</span>
+            <span
+              class="ml-4  transition-opacity duration-300"
+              >Profile</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+            <span class="material-symbols-outlined">settings</span>
+            <span
+              class="ml-4  transition-opacity duration-300"
+              >Settings</span
+            >
+          </a>
+        </li>
+        <li>
+          <a
+            href="#"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+            <span class="material-symbols-outlined">logout</span>
+            <span
+              class="ml-4  transition-opacity duration-300"
+              >Logout</span
+            >
+          </a>
+        </li>
+      </ul>
+
+      <!-- User Account -->
+      <div
+        class="mt-auto flex items-center space-x-4 bg-white/20 p-3 rounded-lg"
+      >
+        <img
+          src="images1/profileai.avif"
+          alt="Profile Photo"
+          class="w-10 h-10 rounded-full"
+        />
+        <div>
+          <h3 class="text-white font-semibold">User</h3>
+          <span class="text-sm text-gray-400">Test</span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <section class="ml-20 p-10 text-white">
+      <div class="text-center">
+        <img src="images1/logo.png" alt="Logo" class="w-36 mx-auto mb-6" />
+        <h1 class="text-4xl font-bold mb-6">PACE</h1>
+        <h2 class="text-2xl font-semibold">Why Free Fox?</h2>
+        <div class="text-lg space-y-4 mt-4">
+          <p>
+            * Are you a student/freelancer? Do you want to organize your
+            Projects/works?
+          </p>
+          <p>
+            * Are you an employee? Do you want to organize your team and analyze
+            it?
+          </p>
+          <p>
+            * Are you an entrepreneur? Do you want to analyze your company's
+            growth, new projects, etc.?
+          </p>
+        </div>
+        <h3 class="text-xl font-semibold mt-8">
+          For these questions, the solution is Free Fox.
+        </h3>
+      </div>
+    </section>
+    <script src="module.js"></script>
+  </body>
+</html>
