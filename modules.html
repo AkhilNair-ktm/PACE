@@ -26,7 +26,7 @@
     </div>
 
     <aside
-      class="sidebar fixed top-0 left-0 h-full hidden lg:block w-20 lg:hover:w-64 bg-[#161a2d] transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
+      class="sidebar fixed top-0 left-0 h-full hidden lg:block w-20 lg:hover:w-64 border border-l-0 border-t-0 border-slate-600 bg-gray-900 transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
     >
       <div class="flex items-center space-x-4">
         <img
@@ -35,7 +35,7 @@
           class="w-10 h-10 rounded-full"
         />
         <h2
-          class="lg:sidebarTitle text-xl font-semibold text-white transition-opacity duration-300"
+          class="sidebarTitle text-xl font-semibold text-white transition-opacity duration-300"
         >
           PACE
         </h2>
@@ -44,7 +44,7 @@
       <ul class="mt-8 flex-1 space-y-6 overflow-auto scrollbar-hidden">
         <!-- Main Menu -->
         <h4 class="text-white font-medium flex items-center space-x-1">
-          <span class="lg:sidebarTitle transition-opacity duration-300"
+          <span class="sidebarTitle transition-opacity duration-300"
             >Modules</span
           >
           <div class="flex-grow h-px bg-[#333578]"></div>
@@ -124,7 +124,7 @@
         </li>
         <!-- Quiz -->
         <h4 class="text-white font-medium flex items-center space-x-2 mt-8">
-          <span class="lg:sidebarTitle transition-opacity duration-300"
+          <span class="sidebarTitle transition-opacity duration-300"
             >Assesment</span
           >
           <div class="flex-grow h-px bg-[#333578]"></div>
@@ -141,7 +141,7 @@
 
         <!-- Account -->
         <h4 class="text-white font-medium flex items-center space-x-2 mt-8">
-          <span class="lg:sidebarTitle transition-opacity duration-300"
+          <span class="sidebarTitle transition-opacity duration-300"
             >Account</span
           >
           <div class="flex-grow h-px bg-[#333578]"></div>
@@ -192,16 +192,405 @@
     </aside>
 
     <!-- Main Content -->
-    <section class="ml-0 p-5 lg:ml-20 text-white h-screen">
+    <section class="ml-0 p-5 lg:ml-20 text-white h-screen text-lg">
       <div class="text-center">
-        <div class="opening-pg bg-red-50 h-screen p-0 hidden"></div>
-        <div id="mod1" class="bg-blue-700 h-screen hidden"></div>
-        <div id="mod2" class="bg-yellow-500 h-screen hidden"></div>
-        <div id="mod3" class="bg-green-600 h-screen hidden"></div>
-        <div id="mod4" class="bg-pink-500 h-screen hidden"></div>
-        <div id="mod5" class="bg-violet-600 h-screen hidden"></div>
-        <div id="mod6" class="bg-orange-600 h-screen hidden"></div>
-        <div id="mod7" class="bg-lime-600 h-screen hidden"></div>
+        <div id="opening-pg" class="bg-black h-screen p-0 px-4 py-9 hidden">
+          <h1
+            class="text-blue-700 text-center text-3xl font-black space-x-4 space-y-4"
+          >
+            WELCOME
+          </h1>
+          <div class="cont1 mt-5">
+            <p>
+              Join us on an exciting journey to explore our planet through the
+              lens of the PACE satellite. Here, you’ll find engaging resources
+              designed for learners of all ages. Discover how light shapes our
+              oceans and atmosphere, learn about the science behind spectral
+              signatures, and gain insights into the effects of climate change.
+              Whether you're a curious beginner or a budding scientist, there's
+              something for everyone. Let’s embark on this adventure together
+              and unlock the mysteries of Earth!
+            </p>
+          </div>
+        </div>
+
+        <!-- module1 -->
+        <div id="mod1" class="min-h-screen px-4 py-9 text-lg hidden">
+          <h2 class="text-4xl text-blue-700 font-black">
+            What is the PACE Satellite?
+          </h2>
+          <div class="cont1 mt-5">
+            <p>
+              The PACE satellite is like a special robot that flies high up in
+              space, looking down at Earth. It helps scientists learn more about
+              our oceans, the air, and the clouds!
+            </p>
+          </div>
+          <img src="asset/image/PACE.jpg" alt="" />
+          <h2 class="text-blue-600 font-bold">•What Does It Do?</h2>
+          <div class="cont1">
+            <p>
+              1. Looks at the Ocean: The PACE satellite can see tiny plants
+              called phytoplankton in the ocean. These little plants are super
+              important because they help make oxygen, just like trees do on
+              land! They are food for many sea animals too. <br />
+              <br />2. Watches the Air: The satellite can also check the air
+              around us to see how clean it is. It looks for tiny bits called
+              aerosols that can come from things like dust, smoke, and
+              pollution. This helps us know if the air is healthy to breathe.<br />
+              <br />
+              3. Studies the Clouds: PACE watches the clouds to learn more about
+              the weather. It helps scientists understand how clouds can affect
+              the Earth’s temperature and climate.
+            </p>
+            <h2 class="text-blue-600 font-bold">•What is Its Purpose?</h2>
+            <p>
+              The main purpose of the PACE satellite is to help scientists
+              understand how our planet works. By looking at the ocean, air, and
+              clouds, scientists can learn about how healthy our oceans are, how
+              clean our air is and how weather and climate change over time
+            </p>
+            <h2 class="text-blue-600 font-bold">• Why is This Important?</h2>
+            <p>
+              Protecting Nature: By learning about the oceans and air, we can
+              better protect them. Healthy oceans and clean air are important
+              for all living things, including humans, animals, and plants.
+              Fighting Climate Change: The information from PACE helps
+              scientists figure out how climate change is affecting our planet.
+              This way, they can help make plans to keep the Earth safe and
+              healthy for the future.
+            </p>
+            <h2 class="text-blue-600 font-bold">• In Summary</h2>
+            <p>
+              The PACE satellite is like a super spy in space, helping us learn
+              about our oceans, air, and clouds so we can take better care of
+              our planet!
+            </p>
+          </div>
+        </div>
+        <!-- module2 -->
+        <div id="mod2" class="min-h-screen px-4 py-9 hidden">
+          <h1 class="text-3xl font-black text-blue-600">
+            Introduction to Light-01
+          </h1>
+          <div class="cont1 mt-5">
+            <p>
+              Light is what helps us see everything around us! Without light,
+              our world would be completely dark. But did you know that light is
+              really special: Scientists are still figuring out all the details,
+              but we’ve gotten very good at describing what light does. For
+              example, light travels super-fast at 671 million miles per hour!
+              Or 3,00,000 kms per seconds. Nothing can go faster than light. We
+              will explore these sections in this module:
+              <br />
+              <br />
+              1. Section I - What is light, and why is it important?
+              <br /><br />
+              2. Section II - How does light make the colors we see?
+              <br /><br />
+              3. Section III - How does light interact with things in the air
+              like clouds and aerosols? <br /><br />
+              4. Section IV - How does light interact with things in the ocean?
+            </p>
+          </div>
+          <h2 class="text-lg text-blue-500 mt-5">
+            •What is light,why is it important to us?
+          </h2>
+          <div class="cont1">
+            <p>
+              Light is a kind of energy that helps us see things! It travels in
+              waves and can also be thought of as tiny particles called photons.
+              And why is it important? Light is important because it helps us
+              see the world around us, allows plants to grow by making food from
+              sunlight and keeps us healthy. Excited to know more? We do have a
+              quick for the video.
+            </p>
+            <br />
+            <br />
+            <br />
+            <iframe
+              class="w-full h-64"
+              src="https://www.youtube.com/embed/WDPgSfULrqo?si=CLvyzNtfTGpBUsq3"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <p>
+              That was fast!! Now do you know about transmission? It is when
+              light passes through something. Imagine light as a traveler on a
+              road. When it comes to something clear like glass or water, it can
+              go straight through without stopping! That’s why you can see
+              through windows or a glass of water—because the light travels
+              through them easily and reaches your eyes. How about reflection?
+              Reflection is when light bounces off something. Think of light as
+              a ball you throw at a wall. When it hits the wall, it bounces back
+              to you! This is what happens when light hits a mirror or a shiny
+              surface. The light bounces off, and that’s how you can see
+              yourself in a mirror! And refraction, Refraction is when light
+              bends as it passes through something. Imagine you're pushing a toy
+              car from a smooth floor onto a carpet. The car slows down and
+              changes direction a bit when it hits the carpet. Light does the
+              same thing when it moves from air into water or glass—it bends!
+              This is why a straw in a glass of water looks like it's broken or
+              bent—it’s because the light is bending as it passes through the
+              water. Want to know more? Take a small detour and explore the
+              world of light wonders.
+            </p>
+
+            <p>
+              Scattering is when light spreads out in different directions.
+              Imagine you throw a handful of sand into the air, and the grains
+              go everywhere! Light does something similar when it hits tiny
+              things like dust or water droplets in the air. Instead of going
+              straight, it spreads in all directions. This is why the sky looks
+              blue during the day—the sunlight gets scattered by the air, and
+              the blue color spreads out across the sky! You might be wondering
+              if you could actually see it, isn’t it? Take this quick video and
+              enjoy yourself
+            </p>
+            <br />
+            <br />
+            <br />
+            <iframe
+              class="w-full h-64"
+              src="https://www.youtube.com/embed/ehUIlhKhzDA?si=6Xnuyv-vg0gAV_hs"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <p>
+              Wow, time for some interesting and serious stuffs. Did you know
+              that light exists in other forms too? Did you know we can actually
+              differentiate light? Interested!! Follow along…
+            </p>
+          </div>
+        </div>
+        <div id="mod3" class="min-h-screen hidden px-4 py-9">
+          <h1 class="text-4xl text-blue-700 font-black">
+            Introduction to Light-02
+          </h1>
+          <div class="cont1 mt-5">
+            <p>
+              This spectrum of energy, or spectrum of light, is referred to as
+              the Electromagnetic Spectrum. NASA explores the properties of
+              different wavelength regions in the electromagnetic spectrum
+              ranging from radio waves to gamma rays. Right around the middle of
+              the spectrum we have visible light - the rainbow of colors we know
+              and love. Just shorter than visible light are the ultraviolet
+              wavelengths, which we wear sunscreen to protect ourselves from.
+              Just longer than visible light is infrared, which we sense as
+              warmth on our skin.
+            </p>
+            <br />
+            <br />
+            <br />
+            <img src="asset/image/content-image1.png" alt="wavelength.png" />
+          </div>
+
+          <div class="cont1">
+            <p>
+              Let's look closer at the visible light portion of the spectrum.
+              Blue light is more energetic than red light; i.e., it has a
+              shorter wavelength than red light. Specifically, we can say that
+              blue light wavelengths are between 450-490 nanometers (nm) long
+              whereas red light is 620-750 nm long. One nanometer is the
+              equivalent of 0.000000001 meters. When discussing how light
+              interacts with the ocean and atmosphere, we often refer to
+              wavelengths in terms of nm.
+            </p>
+            <br />
+            <br />
+            <br />
+            <img src="asset/image/banana.png" alt="" />
+            <h2 class="text-blue-600 font-bold">
+              • How does light make the colours we see?
+            </h2>
+            <p>
+              Imagine that light is like a rainbow of colors shining down on
+              everything around us. When light hits an object, like a banana,
+              some colors are absorbed, and some colors are bounced back. Think
+              of a banana as a sponge that soaks up almost all the colors from
+              the rainbow but lets the yellow color bounce back to our eyes.
+              That's why when you look at a banana, it looks yellow! So, when
+              you see a yellow banana, you’re seeing the color that it reflects
+              while the other colors are being soaked up. It's like the banana
+              is playing hide-and-seek with the colors! Colors come from light,
+              and different colors are like different heights of waves in the
+              ocean. When we look at something, it reflects some of those waves
+              back to our eyes, which helps us see its color. Scientists have a
+              special tool called a spectrometer. This tool helps them see which
+              colors, or wavelengths, of light are bouncing off objects. For
+              example, a green banana peel reflects a lot of light around the
+              color green (about 550 nanometers), while a ripe yellow banana
+              reflects light in the red area (about 675 nanometers). Every
+              object has a special pattern, like a fingerprint, called a
+              spectral signature. This signature tells scientists exactly what
+              colors the object reflects. So, if scientists know the
+              fingerprints of things in the ocean, like tiny plants called
+              phytoplankton or mud, they can tell what’s in the water by looking
+              at the light that PACE's spectrometer sees. It’s like a treasure
+              map for finding out what’s in the ocean!
+            </p>
+          </div>
+        </div>
+        <div id="mod4" class="min-h-screen px-4 py-9 hidden">
+          <h1 class="text-4xl text-blue-700 font-black">Phytoplankton</h1>
+          <div class="cont1 mt-5">
+            <p>
+              Phytoplankton are tiny, plank-like organisms that live in water
+              like how trees and flowers, grow on land.
+            </p>
+          </div>
+          <h2 class="text-blue-600 font-bold">
+            -About Phytoplankton’s Importance-
+          </h2>
+          <div class="cont1">
+            <p>
+              • Oxygen Producers <br />• Foundation of Food Chain <br />
+              • Carbon Trapping <br />
+              • Global Habitat <br />They create over 50% of the world’s oxygen
+              essential for life. They produce the oxygen through photosynthesis
+              like plants in the land.
+            </p>
+            <br />
+            <br />
+            <br />
+            <iframe
+              class="w-full h-64"
+              src="https://www.youtube.com/embed/Z05wURG5wmw?si=qx2dBJ7bOl2A1Xls"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <p class="mt-5">
+              Phytoplankton are found everywhere from Sunny beaches to icy
+              waters. They live in any water where there is sunlight. The spread
+              all around the earth. Phytoplankton convert sunlight into energy
+              through photosynthesis. This energy goes up the food chain as
+              phytoplankton are eaten by small animals. Then bigger animals eat
+              those small animals. So, phytoplankton are like the first step in
+              food chain that help feed all the animals in the ocean.
+            </p>
+            <br />
+            <br />
+            <br />
+          </div>
+        </div>
+        <div id="mod5" class="min-h-screen hidden px-4 py-9">
+          <h1 class="text-4xl text-blue-700 font-black">
+            Introduction to Aerosols
+          </h1>
+          <div class="cont1 mt-5">
+            <p>
+              The role of aerosols in climate science is complex. In general,
+              light-colored particles in the atmosphere will reflect incoming
+              sunlight and cause cooling. Dark-colored particles absorb sunlight
+              and make the atmosphere warmer. Feel free to explore more using
+              the link below.
+            </p>
+          </div>
+          <br />
+          <br />
+          <br />
+          <iframe
+            class="w-full h-64"
+            src="https://www.youtube.com/embed/4eh6IKahbok?si=RpPG55lNHivStm9l"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div id="mod6" class="min-h-screen px-4 py-9 hidden">
+          <h1 class="text-4xl text-blue-700 font-black">
+            INTRODUCTION TO CLOUDS
+          </h1>
+          <div class="cont1 mt-5">
+            <p>
+              Clouds are super important for life on Earth! They can tell us a
+              lot about the weather and climate. Some clouds help keep us cool
+              by blocking the sun, while others trap heat, making Earth warmer.
+              Scientists want to understand how clouds affect Earth's
+              temperature and help keep the environment in balance.
+            </p>
+          </div>
+          <h2 class="text-blue-600 font-bold">
+            How Does the PACE Satellite Study Clouds?
+          </h2>
+          <div class="cont1">
+            <p>
+              The PACE satellite is like a detective in space, using special
+              tools to watch clouds from above. Here’s what it does: <br />
+              1. Watching from Space: PACE looks down at Earth and takes
+              pictures of clouds to see how big they are, where they are, and
+              how they change over time. <br />
+              2. Looking Inside Clouds: PACE can tell what clouds are made
+              of—tiny water droplets or ice crystals—by using light. It studies
+              how clouds reflect sunlight back into space. <br />
+              3. Why It’s Cool: By studying clouds, PACE helps us understand how
+              weather changes, how much sunlight Earth gets, and even how much
+              rain or snow we might get. It’s like having a giant weather
+              station in space!
+            </p>
+          </div>
+        </div>
+        <div id="mod7" class="min-h-screen px-4 py-9">
+          <h1 class="text-4xl text-blue-700 font-black">OCEAN ECOSYSTEMS</h1>
+          <div class="cont1 mt-5">
+            <p>
+              Ocean ecosystems are intricate networks of marine life interacting
+              with each other and their surrounding environments, including
+              water, nutrients, and sunlight. These ecosystems are crucial for
+              maintaining global biodiversity, climate regulation, and human
+              livelihood.
+            </p>
+          </div>
+
+          <div class="cont1">
+            <p>
+              The PACE mission aims to enhance our understanding of ocean
+              ecosystems by providing data on: <br />
+              • Phytoplankton productivity and health through chlorophyll-a
+              measurements. <br />
+              • Ocean color (indicating biological and chemical conditions).
+              <br />
+              • Carbon and nutrient cycling, and their effects on marine life.
+              <br />
+              • Ocean-atmosphere interactions, particularly the role of aerosols
+              in climate regulation.
+            </p>
+            <br />
+            <br />
+            <br />
+            <img src="asset/image/ocean.png" alt="" />
+            <h2 class="text-blue-600 font-bold">PACE Exploration Data</h2>
+            <p>
+              The PACE (Plankton, Aerosol, Cloud, ocean Ecosystem) mission
+              launched on 8 February 2024 and completed commissioning on 5 April
+              2024. PACE has released its first science data from three
+              instruments: OCI, HARP2, and SPEXone, with updates planned. The
+              data is organized into five levels, ranging from raw data
+              (Level-1A) to detailed global maps (Level-4), focusing on ocean
+              color and atmospheric properties. The data is provided in small
+              chunks called granules—5-minute segments for OCI and HARP2, and
+              50-minute segments for SPEXone. While there are some issues, such
+              as location errors and reduced accuracy in certain areas, this
+              initial release is an important step toward better understanding
+              Earth’s oceans and atmosphere.
+            </p>
+            <br />
+            <br />
+            <br />
+            <img src="asset/image/globe.jpg" alt="" />
+          </div>
+        </div>
       </div>
     </section>
     <script src="module.js"></script>

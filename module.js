@@ -16,6 +16,7 @@ sidebarToggler.addEventListener("click", () => {
   }
 });
 
+
 const module1 = document.getElementById("mod1-link");
 const module2 = document.getElementById("mod2-link");
 const module3 = document.getElementById("mod3-link");
@@ -24,6 +25,7 @@ const module5 = document.getElementById("mod5-link");
 const module6 = document.getElementById("mod6-link");
 const module7 = document.getElementById("mod7-link");
 
+const openingPage = document.getElementById("opening-pg");
 const mainBody1 = document.getElementById("mod1");
 const mainBody2 = document.getElementById("mod2");
 const mainBody3 = document.getElementById("mod3");
@@ -41,6 +43,7 @@ module1.addEventListener("click", () => {
   mainBody5.classList.add("hidden");
   mainBody6.classList.add("hidden");
   mainBody7.classList.add("hidden");
+  openingPage.classList.add("hidden");
 });
 
 module2.addEventListener("click", () => {
@@ -51,6 +54,7 @@ module2.addEventListener("click", () => {
   mainBody5.classList.add("hidden");
   mainBody6.classList.add("hidden");
   mainBody7.classList.add("hidden");
+  openingPage.classList.add("hidden");
 });
 module3.addEventListener("click", () => {
   mainBody3.classList.toggle("hidden");
@@ -60,6 +64,7 @@ module3.addEventListener("click", () => {
   mainBody5.classList.add("hidden");
   mainBody6.classList.add("hidden");
   mainBody7.classList.add("hidden");
+  openingPage.classList.add("hidden");
 });
 module4.addEventListener("click", () => {
   mainBody4.classList.toggle("hidden");
@@ -69,6 +74,7 @@ module4.addEventListener("click", () => {
   mainBody5.classList.add("hidden");
   mainBody6.classList.add("hidden");
   mainBody7.classList.add("hidden");
+  openingPage.classList.add("hidden");
 });
 module5.addEventListener("click", () => {
   mainBody5.classList.toggle("hidden");
@@ -78,6 +84,7 @@ module5.addEventListener("click", () => {
   mainBody1.classList.add("hidden");
   mainBody6.classList.add("hidden");
   mainBody7.classList.add("hidden");
+  openingPage.classList.add("hidden");
 });
 module6.addEventListener("click", () => {
   mainBody6.classList.toggle("hidden");
@@ -87,6 +94,7 @@ module6.addEventListener("click", () => {
   mainBody5.classList.add("hidden");
   mainBody1.classList.add("hidden");
   mainBody7.classList.add("hidden");
+  openingPage.classList.add("hidden");
 });
 module7.addEventListener("click", () => {
   mainBody7.classList.toggle("hidden");
@@ -96,6 +104,7 @@ module7.addEventListener("click", () => {
   mainBody5.classList.add("hidden");
   mainBody6.classList.add("hidden");
   mainBody1.classList.add("hidden");
+  openingPage.classList.add("hidden");
 });
 
 const sidebar = document.querySelector(".sidebar");
