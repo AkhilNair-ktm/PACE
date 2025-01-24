@@ -8,7 +8,7 @@ const loginMessage = document.getElementById("loginMessage");
 
 const userEmail = "pace@gmail.com";
 const password = "0000";
-const gitRepoURL = "https://shaun099.github.io/Space_Apps/second.html";
+const gitRepoURL = "modules.html";
 
 signUpLink.addEventListener("click", (event) => {
   event.preventDefault(); // Prevent default anchor behavior
@@ -30,10 +30,11 @@ signInBtn.addEventListener("click", () => {
     loginMessage.textContent = "Login successful. Welcome!";
     setTimeout(() => {
       window.location.href = gitRepoURL;
-  }, 500);
-} else {
+    }, 500);
+  } else {
     // If credentials don't match, show error message
     loginMessage.style.color = "red";
-    loginMessage.textContent = "Invalid username or password. Please try again.";
-}
+    loginMessage.textContent =
+      "Invalid username or password. Please try again.";
+  }
 });
