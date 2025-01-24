@@ -148,6 +148,7 @@
         </h4>
         <li>
           <a
+            id="Profile"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
@@ -157,6 +158,7 @@
         </li>
         <li>
           <a
+            id="Settings"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
@@ -166,6 +168,7 @@
         </li>
         <li>
           <a
+            id="Logout"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
@@ -180,7 +183,7 @@
         class="mt-auto flex items-center space-x-4 bg-white/20 p-2 rounded-lg"
       >
         <img
-          src="assets/images/user.png"
+          src="assets/images/user.webp"
           alt="Profile Photo"
           class="w-10 h-10 rounded-full"
         />
@@ -591,6 +594,25 @@
             <img src="asset/image/globe.jpg" alt="" />
           </div>
         </div>
+
+        <!-- Account -->
+
+        <div
+          id="profileBody"
+          class="min-h-screen px-4 py-9 bg-red-800 hidden"
+        ></div>
+
+        <!-- Settings -->
+        <div
+          id="settingsBody"
+          class="min-h-screen px-4 py-9 bg-green-800 hidden"
+        ></div>
+
+        <!-- Logout -->
+        <div
+          id="logoutBody"
+          class="min-h-screen px-4 py-9 bg-blue-800 hidden"
+        ></div>
       </div>
     </section>
     <script src="module.js"></script>
