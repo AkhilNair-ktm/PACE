@@ -1,40 +1,75 @@
-const signUpLink = document.getElementById("signUpLink");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCsY1X-dFMumMntR74GF86Otx-VEYKZzIE",
+  authDomain: "pace-52f35.firebaseapp.com",
+  projectId: "pace-52f35",
+  storageBucket: "pace-52f35.appspot.com",
+  messagingSenderId: "630887135858",
+  appId: "1:630887135858:web:317de71e655d58276e60eb",
+  measurementId: "G-G4QFKJZFRB",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+// page toggling
 const loginDiv = document.getElementById("loginDiv");
-const signInBtn = document.getElementById("signIn");
-const signUpDiv = document.getElementById("signUpDiv");
-const emailDiv = document.getElementById("email");
-const passwordDiv = document.getElementById("pass");
-const loginMessage = document.getElementById("loginMessage");
+const signupDiv = document.getElementById("signUpDiv");
+const signupLink = document.getElementById("signUpLink");
 
-const userEmail = "pace@gmail.com";
-const password = "0000";
-const gitRepoURL = "modules.html";
-
-signUpLink.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default anchor behavior
-
-  // Hide the login div
+signupLink.addEventListener("click", () => {
   loginDiv.classList.add("hidden");
-
-  // Show the sign-up div
-  signUpDiv.classList.remove("hidden");
+  signupDiv.classList.remove("hidden");
 });
 
-signInBtn.addEventListener("click", () => {
-  const inputGmail = emailDiv.value;
-  const inputPass = passwordDiv.value;
+const loginBtn = document.getElementById("loginBtn");
+const loginMsg = document.getElementById("loginMessage");
 
-  if (inputGmail === userEmail && inputPass === password) {
-    // If credentials match, show success message
-    loginMessage.style.color = "green";
-    loginMessage.textContent = "Login successful. Welcome!";
-    setTimeout(() => {
-      window.location.href = gitRepoURL;
-    }, 500);
-  } else {
-    // If credentials don't match, show error message
-    loginMessage.style.color = "red";
-    loginMessage.textContent =
-      "Invalid username or password. Please try again.";
-  }
+loginBtn.addEventListener("click", () => {
+  console.log("login clicked");
+  const loginEmail = document.getElementById("email").value;
+  const loginPassword = document.getElementById("pass").value;
+
+  signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      loginMsg.classList.add("text-black");
+      loginMsg.innerHTML = "login successful";
+      setTimeout(() => {
+        window.location.href = "modules.html";
+      }, 2000);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      loginMsg.classList.add("text-black");
+      loginMsg.innerHTML = "login unsuccessful";
+    });
+});
+
+const registerBtn = document.getElementById("register");
+const registerMsg = document.getElementById("registerMessage");
+
+registerBtn.addEventListener("click", () => {
+  const registerEmail = document.getElementById("signupEmail").value;
+  const registerPassword = document.getElementById("signupPass").value;
+
+  createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      registerMsg.innerHTML = "Registration successful";
+      setTimeout(() => {
+        window.location.href = "modules.html";
+      }, 1500);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      registerMsg.innerHTML = "Registration unsuccessful";
+    });
 });

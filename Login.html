@@ -57,9 +57,15 @@
               type="password"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
               name="pass"
+              placeholder="Minimum 6 letters"
               id="pass"
             />
           </div>
+
+          <!-- loginmessage  -->
+          <p id="loginMessage" class="py-2 text-green-600 text-lg"></p>
+
+
           <div class="flex flex-col md:flex-row justify-between w-full py-4">
             <div>
               <input type="checkbox" name="ch" id="ch" class="mr-2" />
@@ -71,11 +77,11 @@
           </div>
           <button
             class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
-            id="signIn"
+            id="loginBtn"
           >
-            Sign In
+            Login
           </button>
-          <p id="loginMessage" class="py-2"></p>
+          
           <button
             class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 flex items-center justify-center gap-2 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
           >
@@ -102,6 +108,8 @@
           />
         </div>
       </div>
+
+      <!-- Register  -->
       <div
         id="signUpDiv"
         class="relative flex flex-col m-6 space-y-8 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 md:space-x-6 max-w-4xl w-full hidden"
@@ -137,7 +145,7 @@
               type="text"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
               name="email"
-              id="email2"
+              id="signupEmail"
             />
           </div>
           <div class="py-4">
@@ -149,46 +157,43 @@
             <input
               type="password"
               class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
+              placeholder="Minimum 6 letters"
               name="pass"
-              id="pass2"
+              id="signupPass"
             />
           </div>
-          <div class="py-4">
-            <label
-              for="pass-confim"
-              class="after:content-['*'] after:ml-0.5 after:text-red-500 mb-2 text-black block"
-              >Confirm Password</label
-            >
-            <input
-              type="password"
-              class="w-full p-2 border border-gray-300 rounded-md placeholder:font-light placeholder:text-gray-500 text-gray-700"
-              name="pass-confim"
-              id="pass-confim"
-            />
-          </div>
+          
+          <p id="registerMessage" class="py-2 mb-3 text-green-600"></p>
 
-          <a href="https://shaun099.github.io/Space_Apps/second.html">
-            <button
+          <a>
+            <button id="register"
               class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
             >
-              Sign In
+              Register
             </button>
           </a>
           <button
             class="w-full bg-blue-600 text-white p-2 rounded-lg mb-6 flex items-center justify-center gap-2 hover:bg-gray-200 hover:text-black hover:border hover:border-gray-300"
           >
             <img
-              src="assets/images/icons8-google-48.png"
+              src="assets/images/icons8-google-48.webp"
               alt="Google Icon"
               class="w-6 h-6"
             />
             Sign in with Google
           </button>
         </div>
+        <div class="relative w-full md:w-1/2 bg-black hidden lg:block">
+          <img
+            src="assets/images/pexels-spacex2.webp"
+            alt="img"
+            class="w-[400px] h-full rounded-r-2xl md:block"
+          />
+        </div>
         
   
     </div>
-    <script src="main.js"></script>
-    <script src="login.js"></script>
+   
+    <script src="login.js" type="module"></script>
   </body>
 </html>
