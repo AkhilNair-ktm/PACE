@@ -40,15 +40,15 @@ loginBtn.addEventListener("click", () => {
   signInWithEmailAndPassword(auth, loginEmail, loginPassword)
     .then((userCredential) => {
       const user = userCredential.user;
-      loginMsg.classList.add("text-black");
+      loginMsg.classList.add("text-green-600");
       loginMsg.innerHTML = "login successful";
       setTimeout(() => {
         window.location.href = "modules.html";
-      }, 2000);
+      }, 500);
     })
     .catch((error) => {
       const errorMessage = error.message;
-      loginMsg.classList.add("text-black");
+      loginMsg.classList.add("text-red-400");
       loginMsg.innerHTML = "login unsuccessful";
     });
 });
@@ -63,13 +63,15 @@ registerBtn.addEventListener("click", () => {
   createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
     .then((userCredential) => {
       const user = userCredential.user;
+      registerMsg.classList.add("text-green-600");
       registerMsg.innerHTML = "Registration successful";
       setTimeout(() => {
         window.location.href = "modules.html";
-      }, 1500);
+      }, 500);
     })
     .catch((error) => {
       const errorMessage = error.message;
+      registerMsg.classList.add("text-red-400");
       registerMsg.innerHTML = "Registration unsuccessful";
     });
 });
