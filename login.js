@@ -90,7 +90,7 @@ registerBtn.addEventListener("click", () => {
     .then((userCredential) => {
       const user = userCredential.user;
       registerMsg.classList.add("text-green-600");
-      registerMsg.innerHTML = "Registration successful";
+      registerMsg.innerHTML = "SignUp successful";
       setTimeout(() => {
         window.location.href = "modules.html";
       }, 500);
@@ -98,7 +98,7 @@ registerBtn.addEventListener("click", () => {
     .catch((error) => {
       const errorMessage = error.message;
       registerMsg.classList.add("text-red-400");
-      registerMsg.innerHTML = "Registration unsuccessful";
+      registerMsg.innerHTML = "SignUp unsuccessful";
     });
 });
 
