@@ -3,6 +3,8 @@ import {
   getAuth,
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -18,6 +20,8 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+auth.languageCode = "it";
+const provider = new GoogleAuthProvider();
 
 // page toggling
 const loginDiv = document.getElementById("loginDiv");
@@ -31,6 +35,17 @@ signupLink.addEventListener("click", () => {
 
 const loginBtn = document.getElementById("loginBtn");
 const loginMsg = document.getElementById("loginMessage");
+
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    if (
+      document.activeElement == document.getElementById("email") ||
+      document.activeElement == document.getElementById("pass")
+    ) {
+      loginBtn.click();
+    }
+  }
+});
 
 loginBtn.addEventListener("click", () => {
   console.log("login clicked");
@@ -56,6 +71,17 @@ loginBtn.addEventListener("click", () => {
 const registerBtn = document.getElementById("register");
 const registerMsg = document.getElementById("registerMessage");
 
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    if (
+      document.activeElement == document.getElementById("signupEmail") ||
+      document.activeElement == document.getElementById("signupPass")
+    ) {
+      registerBtn.click();
+    }
+  }
+});
+
 registerBtn.addEventListener("click", () => {
   const registerEmail = document.getElementById("signupEmail").value;
   const registerPassword = document.getElementById("signupPass").value;
@@ -73,5 +99,25 @@ registerBtn.addEventListener("click", () => {
       const errorMessage = error.message;
       registerMsg.classList.add("text-red-400");
       registerMsg.innerHTML = "Registration unsuccessful";
+    });
+});
+
+const googleBtn = document.getElementById("googleBtn");
+googleBtn.addEventListener("click", () => {
+  console.log("google");
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      // const token = credential.accessToken;
+      const user = result.user;
+      loginMsg.classList.add("text-green-600");
+      loginMsg.innerHTML = "login successful";
+      window.location.href = "modules.html";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // const email = error.customData.email;
+      // const credential = GoogleAuthProvider.credentialFromError(error);
     });
 });
