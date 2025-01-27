@@ -5,6 +5,9 @@ import {
   createUserWithEmailAndPassword,
   GoogleAuthProvider,
   signInWithPopup,
+  setPersistence,
+  browserLocalPersistence,
+  browserSessionPersistence,
 } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
 
 const firebaseConfig = {
@@ -28,6 +31,8 @@ const loginDiv = document.getElementById("loginDiv");
 const signupDiv = document.getElementById("signUpDiv");
 const signupLink = document.getElementById("signUpLink");
 
+let isLogged = false;
+
 signupLink.addEventListener("click", () => {
   loginDiv.classList.add("hidden");
   signupDiv.classList.remove("hidden");
@@ -46,25 +51,48 @@ document.addEventListener("keydown", (e) => {
     }
   }
 });
-
+const rememberMeCheckbox = document.getElementById("checkBox");
 loginBtn.addEventListener("click", () => {
   console.log("login clicked");
   const loginEmail = document.getElementById("email").value;
   const loginPassword = document.getElementById("pass").value;
 
-  signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+  // signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+  //   .then((userCredential) => {
+  //     const user = userCredential.user;
+  //     loginMsg.classList.add("text-green-600");
+  //     loginMsg.innerHTML = "login successful";
+
+  //     setTimeout(() => {
+  //       window.location.href = "modules.html";
+  //     }, 500);
+  //   })
+  //   .catch((error) => {
+  //     const errorMessage = error.message;
+  //     loginMsg.classList.add("text-red-400");
+  //     loginMsg.innerHTML = "login unsuccessful";
+  //   });
+
+  const persistence = rememberMeCheckbox.checked
+    ? browserLocalPersistence // Remember the session across tabs and browser restarts
+    : browserSessionPersistence; // Only keep the session in the current tab
+
+  setPersistence(auth, persistence)
+    .then(() => {
+      // Proceed with login
+      return signInWithEmailAndPassword(auth, loginEmail, loginPassword);
+    })
     .then((userCredential) => {
       const user = userCredential.user;
       loginMsg.classList.add("text-green-600");
-      loginMsg.innerHTML = "login successful";
+      loginMsg.innerHTML = "Login successful";
       setTimeout(() => {
-        window.location.href = "modules.html";
+        window.location.href = "modules.html"; // Redirect after successful login
       }, 500);
     })
     .catch((error) => {
-      const errorMessage = error.message;
       loginMsg.classList.add("text-red-400");
-      loginMsg.innerHTML = "login unsuccessful";
+      loginMsg.innerHTML = "Login unsuccessful";
     });
 });
 
@@ -91,6 +119,7 @@ registerBtn.addEventListener("click", () => {
       const user = userCredential.user;
       registerMsg.classList.add("text-green-600");
       registerMsg.innerHTML = "SignUp successful";
+
       setTimeout(() => {
         window.location.href = "modules.html";
       }, 500);
@@ -108,7 +137,6 @@ googleBtn.addEventListener("click", () => {
   signInWithPopup(auth, provider)
     .then((result) => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
-      // const token = credential.accessToken;
       const user = result.user;
       loginMsg.classList.add("text-green-600");
       loginMsg.innerHTML = "login successful";
@@ -117,7 +145,5 @@ googleBtn.addEventListener("click", () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      // const email = error.customData.email;
-      // const credential = GoogleAuthProvider.credentialFromError(error);
     });
 });
