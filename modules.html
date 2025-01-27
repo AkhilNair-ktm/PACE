@@ -609,12 +609,20 @@
         ></div>
 
         <!-- Logout -->
-        <div
-          id="logoutBody"
-          class="min-h-screen px-4 py-9 bg-blue-800 hidden"
-        ></div>
-      </div>
-    </section>
-    <script src="module.js"></script>
-  </body>
-</html>
+        <div id="logoutBody" class="min-h-screen px-4 py-9 bg-blue-800 hidden">
+          <!-- Video Section -->
+          <div class="video-container">
+            <video 
+              width="640" 
+              height="360" 
+              controls 
+              autoplay 
+              loop 
+              class="rounded-lg shadow-lg mx-auto block"
+            >
+              <source src="assets/images/logout.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p class="text-white text-center mt-2">Enjoy the video!</p>
+          </div>
+        </div>
