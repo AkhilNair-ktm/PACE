@@ -11,5 +11,9 @@
   "description": "",
   "devDependencies": {
     "tailwindcss": "^3.4.17"
+  },
+  "dependencies": {
+    "firebase": "^11.2.0",
+    "mongodb": "^6.12.0"
   }
 }
