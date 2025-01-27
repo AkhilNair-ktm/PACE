@@ -1,40 +1,123 @@
-const signUpLink = document.getElementById("signUpLink");
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+import {
+  getAuth,
+  signInWithEmailAndPassword,
+  createUserWithEmailAndPassword,
+  GoogleAuthProvider,
+  signInWithPopup,
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCsY1X-dFMumMntR74GF86Otx-VEYKZzIE",
+  authDomain: "pace-52f35.firebaseapp.com",
+  projectId: "pace-52f35",
+  storageBucket: "pace-52f35.appspot.com",
+  messagingSenderId: "630887135858",
+  appId: "1:630887135858:web:317de71e655d58276e60eb",
+  measurementId: "G-G4QFKJZFRB",
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+auth.languageCode = "it";
+const provider = new GoogleAuthProvider();
+
+// page toggling
 const loginDiv = document.getElementById("loginDiv");
-const signInBtn = document.getElementById("signIn");
-const signUpDiv = document.getElementById("signUpDiv");
-const emailDiv = document.getElementById("email");
-const passwordDiv = document.getElementById("pass");
-const loginMessage = document.getElementById("loginMessage");
+const signupDiv = document.getElementById("signUpDiv");
+const signupLink = document.getElementById("signUpLink");
 
-const userEmail = "pace@gmail.com";
-const password = "0000";
-const gitRepoURL = "modules.html";
-
-signUpLink.addEventListener("click", (event) => {
-  event.preventDefault(); // Prevent default anchor behavior
-
-  // Hide the login div
+signupLink.addEventListener("click", () => {
   loginDiv.classList.add("hidden");
-
-  // Show the sign-up div
-  signUpDiv.classList.remove("hidden");
+  signupDiv.classList.remove("hidden");
 });
 
-signInBtn.addEventListener("click", () => {
-  const inputGmail = emailDiv.value;
-  const inputPass = passwordDiv.value;
+const loginBtn = document.getElementById("loginBtn");
+const loginMsg = document.getElementById("loginMessage");
 
-  if (inputGmail === userEmail && inputPass === password) {
-    // If credentials match, show success message
-    loginMessage.style.color = "green";
-    loginMessage.textContent = "Login successful. Welcome!";
-    setTimeout(() => {
-      window.location.href = gitRepoURL;
-    }, 500);
-  } else {
-    // If credentials don't match, show error message
-    loginMessage.style.color = "red";
-    loginMessage.textContent =
-      "Invalid username or password. Please try again.";
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    if (
+      document.activeElement == document.getElementById("email") ||
+      document.activeElement == document.getElementById("pass")
+    ) {
+      loginBtn.click();
+    }
   }
+});
+
+loginBtn.addEventListener("click", () => {
+  console.log("login clicked");
+  const loginEmail = document.getElementById("email").value;
+  const loginPassword = document.getElementById("pass").value;
+
+  signInWithEmailAndPassword(auth, loginEmail, loginPassword)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      loginMsg.classList.add("text-green-600");
+      loginMsg.innerHTML = "login successful";
+      setTimeout(() => {
+        window.location.href = "modules.html";
+      }, 500);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      loginMsg.classList.add("text-red-400");
+      loginMsg.innerHTML = "login unsuccessful";
+    });
+});
+
+const registerBtn = document.getElementById("register");
+const registerMsg = document.getElementById("registerMessage");
+
+document.addEventListener("keydown", (e) => {
+  if (e.key == "Enter") {
+    if (
+      document.activeElement == document.getElementById("signupEmail") ||
+      document.activeElement == document.getElementById("signupPass")
+    ) {
+      registerBtn.click();
+    }
+  }
+});
+
+registerBtn.addEventListener("click", () => {
+  const registerEmail = document.getElementById("signupEmail").value;
+  const registerPassword = document.getElementById("signupPass").value;
+
+  createUserWithEmailAndPassword(auth, registerEmail, registerPassword)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      registerMsg.classList.add("text-green-600");
+      registerMsg.innerHTML = "SignUp successful";
+      setTimeout(() => {
+        window.location.href = "modules.html";
+      }, 500);
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      registerMsg.classList.add("text-red-400");
+      registerMsg.innerHTML = "SignUp unsuccessful";
+    });
+});
+
+const googleBtn = document.getElementById("googleBtn");
+googleBtn.addEventListener("click", () => {
+  console.log("google");
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      // const token = credential.accessToken;
+      const user = result.user;
+      loginMsg.classList.add("text-green-600");
+      loginMsg.innerHTML = "login successful";
+      window.location.href = "modules.html";
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // const email = error.customData.email;
+      // const credential = GoogleAuthProvider.credentialFromError(error);
+    });
 });

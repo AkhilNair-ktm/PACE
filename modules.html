@@ -19,18 +19,18 @@
     <!-- Sidebar -->
     <div class="flex justify-end">
       <div
-        class="absolute text-2xl text-white my-7 mx-7 lg:hidden border border-white rounded-md bg-white/20"
+        class="absolute text-2xl text-white my-7 mx-7 lg:hidden border border-white rounded-r-full bg-white/20"
       >
         <i class="ri-menu-2-line" id="sidebarToggler"></i>
       </div>
     </div>
 
     <aside
-      class="sidebar fixed top-0 left-0 h-full hidden lg:block w-20 lg:hover:w-64 border border-l-0 border-t-0 border-slate-600 bg-gray-900 transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
+      class="sidebar fixed top-3 rounded-xl left-3 h-screen hidden lg:block w-20 lg:hover:w-64 bg-gray-900 transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
     >
       <div class="flex items-center space-x-4">
         <img
-          src="assets/images/favicon.png"
+          src="assets/images/favicon.webp"
           alt="logo"
           class="w-10 h-10 rounded-full"
         />
@@ -148,6 +148,7 @@
         </h4>
         <li>
           <a
+            id="Profile"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
@@ -157,6 +158,7 @@
         </li>
         <li>
           <a
+            id="Settings"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
@@ -166,6 +168,7 @@
         </li>
         <li>
           <a
+            id="Logout"
             href="#"
             class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
           >
@@ -180,7 +183,7 @@
         class="mt-auto flex items-center space-x-4 bg-white/20 p-2 rounded-lg"
       >
         <img
-          src="assets/images/user.png"
+          src="assets/images/user.webp"
           alt="Profile Photo"
           class="w-10 h-10 rounded-full"
         />
@@ -591,6 +594,25 @@
             <img src="asset/image/globe.jpg" alt="" />
           </div>
         </div>
+
+        <!-- Account -->
+
+        <div
+          id="profileBody"
+          class="min-h-screen px-4 py-9 bg-red-800 hidden"
+        ></div>
+
+        <!-- Settings -->
+        <div
+          id="settingsBody"
+          class="min-h-screen px-4 py-9 bg-green-800 hidden"
+        ></div>
+
+        <!-- Logout -->
+        <div
+          id="logoutBody"
+          class="min-h-screen px-4 py-9 bg-blue-800 hidden"
+        ></div>
       </div>
     </section>
     <script src="module.js"></script>
