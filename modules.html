@@ -43,6 +43,19 @@
 
       <ul class="mt-8 flex-1 space-y-6 overflow-auto scrollbar-hidden">
         <!-- Main Menu -->
+        <div class="flex-grow h-px bg-[#333578]"></div>
+        <li>
+          <a
+            href="index.html"
+            class="flex items-center text-[#dbd4d4e3] hover:text-white p-3 rounded-lg hover:bg-white/20"
+          >
+            <i class="ri-flashlight-fill text-2xl"></i>
+            <span class="ml-4 transition-opacity duration-300 space-x-3"
+              >Home</span
+            >
+          </a>
+        </li>
+
         <h4 class="text-white font-medium flex items-center space-x-1">
           <span class="sidebarTitle transition-opacity duration-300"
             >Modules</span
@@ -609,12 +622,12 @@
         ></div>
 
         <!-- Logout -->
-        <div
+        <!-- <div
           id="logoutBody"
           class="min-h-screen px-4 py-9 bg-blue-800 hidden"
-        ></div>
+        ></div> -->
       </div>
     </section>
-    <script src="module.js"></script>
+    <script src="module.js" type="module"></script>
   </body>
 </html>

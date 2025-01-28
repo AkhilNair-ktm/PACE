@@ -1,3 +1,36 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+
+import {
+  getAuth,
+  signOut,
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCsY1X-dFMumMntR74GF86Otx-VEYKZzIE",
+  authDomain: "pace-52f35.firebaseapp.com",
+  projectId: "pace-52f35",
+  storageBucket: "pace-52f35.appspot.com",
+  messagingSenderId: "630887135858",
+  appId: "1:630887135858:web:317de71e655d58276e60eb",
+  measurementId: "G-G4QFKJZFRB",
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+const logOut = document.getElementById("Logout");
+logOut.addEventListener("click", () => {
+  signOut(auth)
+    .then(() => {
+      console.log("logged out");
+      localStorage.clear();
+      sessionStorage.clear();
+      window.location.href = "index.html";
+    })
+    .catch((error) => {
+      console.log("error", error);
+    });
+});
+
 const sidebarToggler = document.getElementById("sidebarToggler");
 const sideBar = document.querySelector(".sidebar");
 
@@ -36,7 +69,6 @@ const bodySections = [
   "mod8",
   "profileBody",
   "settingsBody",
-  "logoutBody",
   "opening-pg",
 ];
 
@@ -44,7 +76,6 @@ const bodySections = [
 
 const profile = document.getElementById("Profile");
 const settings = document.getElementById("Settings");
-const logOut = document.getElementById("Logout");
 
 const hideAllSections = () => {
   bodySections.forEach((sectionId) => {
@@ -78,10 +109,10 @@ settings.addEventListener("click", () => {
   showSection("settingsBody");
 });
 
-logOut.addEventListener("click", () => {
-  hideAllSections();
-  showSection("logoutBody");
-});
+// logOut.addEventListener("click", () => {
+//   hideAllSections();
+//   showSection("logoutBody");
+// });
 
 // ------------
 

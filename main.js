@@ -1,3 +1,48 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+
+import {
+  getAuth,
+  onAuthStateChanged,
+} from "https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCsY1X-dFMumMntR74GF86Otx-VEYKZzIE",
+  authDomain: "pace-52f35.firebaseapp.com",
+  projectId: "pace-52f35",
+  storageBucket: "pace-52f35.appspot.com",
+  messagingSenderId: "630887135858",
+  appId: "1:630887135858:web:317de71e655d58276e60eb",
+  measurementId: "G-G4QFKJZFRB",
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth();
+
+const learnBtn = document.getElementById("learnBtn");
+let userEmail = "";
+let firstLetter = "";
+const loginIcon = document.getElementById("loginIcon");
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is logged in
+    console.log("User is logged in");
+    userEmail = user.email;
+    console.log(userEmail);
+    firstLetter = userEmail.charAt(0).toUpperCase();
+    console.log(firstLetter);
+    loginIcon.textContent = firstLetter;
+    //.textContent = firstLetter;
+    learnBtn.href = "modules.html";
+  } else {
+    // No user is logged in
+    console.log("No user is logged in");
+    // Redirect to login page
+    learnBtn.href = "Login.html";
+  }
+});
+console.log(userEmail);
+
 const navMenu = document.getElementById("nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
 const hamburger = document.getElementById("hamburger");
