@@ -19,10 +19,20 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 const learnBtn = document.getElementById("learnBtn");
+let userEmail = "";
+let firstLetter = "";
+const loginIcon = document.getElementById("loginIcon");
+
 onAuthStateChanged(auth, (user) => {
   if (user) {
     // User is logged in
     console.log("User is logged in");
+    userEmail = user.email;
+    console.log(userEmail);
+    firstLetter = userEmail.charAt(0).toUpperCase();
+    console.log(firstLetter);
+    loginIcon.textContent = firstLetter;
+    //.textContent = firstLetter;
     learnBtn.href = "modules.html";
   } else {
     // No user is logged in
@@ -31,6 +41,7 @@ onAuthStateChanged(auth, (user) => {
     learnBtn.href = "Login.html";
   }
 });
+console.log(userEmail);
 
 const navMenu = document.getElementById("nav-menu");
 const navLink = document.querySelectorAll(".nav-link");
