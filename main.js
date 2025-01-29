@@ -22,6 +22,8 @@ const learnBtn = document.getElementById("learnBtn");
 let userEmail = "";
 let firstLetter = "";
 const loginIcon = document.getElementById("loginIcon");
+const loginItem = document.getElementById("loginItem");
+const iconItem = document.getElementById("iconItem");
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
@@ -32,11 +34,16 @@ onAuthStateChanged(auth, (user) => {
     firstLetter = userEmail.charAt(0).toUpperCase();
     console.log(firstLetter);
     loginIcon.textContent = firstLetter;
+    loginItem.classList.add("hidden");
+    iconItem.classList.remove("hidden");
     //.textContent = firstLetter;
     learnBtn.href = "modules.html";
   } else {
     // No user is logged in
     console.log("No user is logged in");
+
+    loginItem.classList.remove("hidden");
+    iconItem.classList.add("hidden");
     // Redirect to login page
     learnBtn.href = "Login.html";
   }
@@ -80,7 +87,6 @@ const activeLink = () => {
     }
   });
 };
-
 window.addEventListener("scroll", activeLink);
 
 // scroll reveal animation

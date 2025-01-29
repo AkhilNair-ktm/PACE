@@ -749,6 +749,10 @@ video {
   height: 16rem;
 }
 
+.h-8{
+  height: 2rem;
+}
+
 .h-full{
   height: 100%;
 }
@@ -759,10 +763,6 @@ video {
 
 .h-screen{
   height: 100vh;
-}
-
-.h-8{
-  height: 2rem;
 }
 
 .min-h-\[80vh\]{
@@ -789,16 +789,16 @@ video {
   width: 16rem;
 }
 
+.w-8{
+  width: 2rem;
+}
+
 .w-\[400px\]{
   width: 400px;
 }
 
 .w-full{
   width: 100%;
-}
-
-.w-8{
-  width: 2rem;
 }
 
 .max-w-2xl{
@@ -907,10 +907,6 @@ video {
   gap: 2rem;
 }
 
-.gap-4{
-  gap: 1rem;
-}
-
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
@@ -1011,10 +1007,6 @@ video {
   border-width: 1px;
 }
 
-.border-b{
-  border-bottom-width: 1px;
-}
-
 .border-blue-600{
   --tw-border-opacity: 1;
   border-color: rgb(37 99 235 / var(--tw-border-opacity, 1));
@@ -1030,11 +1022,6 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity, 1));
 }
 
-.border-red-600{
-  --tw-border-opacity: 1;
-  border-color: rgb(220 38 38 / var(--tw-border-opacity, 1));
-}
-
 .bg-\[\#333578\]{
   --tw-bg-opacity: 1;
   background-color: rgb(51 53 120 / var(--tw-bg-opacity, 1));
@@ -1047,6 +1034,10 @@ video {
 
 .bg-black\/80{
   background-color: rgb(0 0 0 / 0.8);
+}
+
+.bg-blue-600\/80{
+  background-color: rgb(37 99 235 / 0.8);
 }
 
 .bg-blue-700{
@@ -1086,20 +1077,6 @@ video {
 
 .bg-white\/20{
   background-color: rgb(255 255 255 / 0.2);
-}
-
-.bg-yellow-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(253 224 71 / var(--tw-bg-opacity, 1));
-}
-
-.bg-blue-600{
-  --tw-bg-opacity: 1;
-  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
-}
-
-.bg-blue-600\/80{
-  background-color: rgb(37 99 235 / 0.8);
 }
 
 .p-2{
@@ -1154,10 +1131,6 @@ video {
 
 .text-center{
   text-align: center;
-}
-
-.align-middle{
-  vertical-align: middle;
 }
 
 .font-Jost{
@@ -1627,6 +1600,16 @@ h3{
 
   .lg\:pt-10{
     padding-top: 2.5rem;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
+  .lg\:text-sm{
+    font-size: 0.875rem;
+    line-height: 1.25rem;
   }
 
   .lg\:hover\:w-64:hover{
