@@ -15,16 +15,7 @@
       }
     </style>
   </head>
-  <body class="min-h-screen bg-black font-mono">
-    <!-- Sidebar -->
-    <div class="flex justify-end">
-      <div
-        class="absolute text-2xl text-white my-7 mx-7 lg:hidden border border-white rounded-r-full bg-white/20"
-      >
-        <i class="ri-menu-2-line" id="sidebarToggler"></i>
-      </div>
-    </div>
-
+  <body class="min-h-screen bg-black font-mono pt-[60px]">
     <aside
       class="sidebar fixed top-3 rounded-xl left-3 h-screen hidden lg:block w-20 lg:hover:w-64 bg-gray-900 transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
     >
@@ -206,6 +197,17 @@
         </div>
       </div>
     </aside>
+
+    <!-- navbar -->
+    <div class="px-3 pt-3 lg:hidden z-50 fixed top-0 left-3 right-3">
+      <div class="w-full h-[60px] bg-gray-900/75 rounded-xl flex justify-end">
+        <div class="w-20 flex items-center">
+          <div class="absolute text-4xl text-white my-7 mx-7 lg:hidden">
+            <i class="ri-menu-2-line" id="sidebarToggler"></i>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Main Content -->
     <section class="ml-0 p-5 lg:ml-20 text-white h-screen text-lg">
