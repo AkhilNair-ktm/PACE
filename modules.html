@@ -15,9 +15,9 @@
       }
     </style>
   </head>
-  <body class="min-h-screen bg-black font-mono pt-[60px]">
+  <body class="min-h-screen bg-black font-mono pt-[60px] lg:pt-0">
     <aside
-      class="sidebar fixed top-3 rounded-xl left-3 h-screen hidden lg:block w-20 lg:hover:w-64 bg-gray-900 transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
+      class="sidebar z-50 fixed top-3 rounded-xl left-3 h-screen hidden lg:block w-20 lg:hover:w-64 bg-gray-900 transition-all duration-300 flex flex-col p-5 overflow-hidden lg:overflow-y-auto"
     >
       <div class="flex items-center space-x-4">
         <img
@@ -199,8 +199,10 @@
     </aside>
 
     <!-- navbar -->
-    <div class="px-3 pt-3 lg:hidden z-50 fixed top-0 left-0 right-0">
-      <div class="w-full h-[60px] bg-gray-900/75 rounded-xl flex justify-end">
+    <div class="px-3 pt-3 lg:hidden z-40 fixed top-0 left-0 right-0">
+      <div
+        class="w-full h-[50px] bg-gray-900/75 rounded-xl flex justify-end border border-gray-700/50"
+      >
         <div class="w-20 flex items-center">
           <div class="absolute text-4xl text-white my-7 mx-7 lg:hidden">
             <i class="ri-menu-2-line" id="sidebarToggler"></i>
@@ -237,12 +239,14 @@
           <h2 class="text-4xl text-blue-700 font-black">
             What is the PACE Satellite?
           </h2>
-          <div class="cont1 mt-5">
-            <p>
-              The PACE satellite is like a special robot that flies high up in
-              space, looking down at Earth. It helps scientists learn more about
+          <div class="cont1 mt-8 flex justify-around px-8">
+            <p class="py-16">
+              The PACE satellite is like a special robot<br />
+              that flies high up in space, looking down at Earth. <br />
+              It helps scientists learn more about <br />
               our oceans, the air, and the clouds!
             </p>
+            <img src="assets/images/mod_satellite.jpg" class="w-1/3" alt="" />
           </div>
           <img src="asset/image/PACE.jpg" alt="" />
           <h2 class="text-blue-600 font-bold">•What Does It Do?</h2>
